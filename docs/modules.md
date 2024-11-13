@@ -1,1 +1,1 @@
-::: extract_pii_data_from_markdown.foo
+::: extract_pii_data_from_markdown
