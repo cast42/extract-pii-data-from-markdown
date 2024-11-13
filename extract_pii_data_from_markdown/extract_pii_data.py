@@ -52,7 +52,7 @@ def extract_pii_data(  # type: ignore  # noqa: PGH003
         print(f'{entity["text"]} => {entity["label"]}, {entity["score"]}')
         if entity["score"] > 0.5:
             pii_data.append({
-                "data_type": entity["label"],
+                "pii_type": entity["label"],
                 "pii_value": entity["text"],
                 "private": True,
             })
