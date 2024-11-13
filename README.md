@@ -72,3 +72,6 @@ For more details, see [here](https://fpgmaas.github.io/cookiecutter-uv/features/
 ---
 
 Repository initiated with [fpgmaas/cookiecutter-uv](https://github.com/fpgmaas/cookiecutter-uv).
+
+GLiNER models from Huggingface are typically stored in ~/.cache/huggingface/hub
+Remove this cache with: rm -rf ~/.cache/huggingface/hub

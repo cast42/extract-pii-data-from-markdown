@@ -1,4 +1,4 @@
-from eextract_pii_data_from_markdown.foo import foo
+from extract_pii_data_from_markdown.foo import foo
 
 
 def test_foo():

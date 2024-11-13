@@ -17,6 +17,11 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
+dependencies = [
+    "gliner>=0.2.13",
+    "rich>=13.9.4",
+    "torch<2.3.0",
+]
 
 [project.urls]
 Homepage = "https://cast42.github.io/extract-pii-data-from-markdown/"
@@ -42,10 +47,10 @@ requires = ["setuptools >= 61.0"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
-py-modules = ["eextract_pii_data_from_markdown"]
+py-modules = ["extract_pii_data_from_markdown"]
 
 [tool.mypy]
-files = ["eextract_pii_data_from_markdown"]
+files = ["extract_pii_data_from_markdown"]
 disallow_untyped_defs = true
 disallow_any_unimported = true
 no_implicit_optional = true

@@ -18,4 +18,4 @@ ADD . /app
 # Sync the project
 RUN uv sync --frozen
 
-CMD [ "python", "eextract_pii_data_from_markdown/foo.py"]
+CMD [ "python", "extract_pii_data_from_markdown/foo.py"]
