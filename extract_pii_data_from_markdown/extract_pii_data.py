@@ -10,6 +10,8 @@ from gliner import GLiNER  # type: ignore  # noqa: PGH003
 from gliner.model import BaseModel, BaseORTModel  # type: ignore  # noqa: PGH003
 from rich.progress import Progress
 
+MAX_LENGHT = 2048
+
 # Set the logging level
 logging.basicConfig(level=logging.INFO)
 
@@ -60,7 +62,7 @@ def extract_pii_data(  # type: ignore  # noqa: PGH003
     return pii_data
 
 
-def split_text(text: str, max_length: int = 512) -> list[str]:
+def split_text(text: str, max_length: int = MAX_LENGHT) -> list[str]:
     """
     Split a given text into chunks of up to `max_length` characters, ensuring
     that words are not split mid-way. Each chunk will end at a space if possible,
@@ -126,13 +128,13 @@ def extract_pii_from_markdown(file_path: Union[str, Path]) -> bool:
     # Load the fine-tuned GLiNER model
     # model = GLiNER.from_pretrained("gretelai/gretel-gliner-bi-small-v1.0")
     # model = GLiNER.from_pretrained("gretelai/gretel-gliner-bi-base-v1.0")
-    model = GLiNER.from_pretrained("gretelai/gretel-gliner-bi-large-v1.0")
+    model = GLiNER.from_pretrained("gretelai/gretel-gliner-bi-large-v1.0", max_length=MAX_LENGHT)
 
     device = "cuda" if torch.cuda.is_available() else "cpu"
     model = model.to(device)
 
     document = markdown_path.read_text()
-    sentences = document.split("\n")
+    sentences = document.split("\n\n")
     number_of_sentences = len(sentences)
     all_pii_data: list[dict] = []
 

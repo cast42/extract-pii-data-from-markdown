@@ -11,18 +11,15 @@ Extract PII data with GliNER from text
 - **Github repository**: <https://github.com/cast42/extract-pii-data-from-markdown/>
 - **Documentation** <https://cast42.github.io/extract-pii-data-from-markdown/>
 
-## Getting started with your project
+## Getting started with this project
 
-### 1. Create a New Repository
+### 1. Clone this Repository
 
 First, create a repository on GitHub with the same name as this project, and then run the following commands:
 
 ```bash
-git init -b main
-git add .
-git commit -m "init commit"
-git remote add origin git@github.com:cast42/extract-pii-data-from-markdown.git
-git push -u origin main
+git clone https://github.com/cast42/extract-pii-data-from-markdown.git
+cd extract-pii-data-from-markdown
 ```
 
 ### 2. Set Up Your Development Environment

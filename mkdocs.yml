@@ -15,7 +15,7 @@ plugins:
   - mkdocstrings:
       handlers:
         python:
-          paths: [eextract_pii_data_from_markdown]
+          paths: [extract_pii_data_from_markdown]
 theme:
   name: material
   feature:
